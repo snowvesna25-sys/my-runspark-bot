@@ -119,6 +119,6 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
-    app.add_handler(Command("test", test))
+    app.add_handler(CommandHandler("test", test))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_mood))
     app.run_polling()
